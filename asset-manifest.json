@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bbowl/static/css/main.b994a612.chunk.css",
+    "main.js": "/bbowl/static/js/main.3882cd3e.chunk.js",
+    "main.js.map": "/bbowl/static/js/main.3882cd3e.chunk.js.map",
+    "runtime-main.js": "/bbowl/static/js/runtime-main.240b9165.js",
+    "runtime-main.js.map": "/bbowl/static/js/runtime-main.240b9165.js.map",
+    "static/js/2.63ea6beb.chunk.js": "/bbowl/static/js/2.63ea6beb.chunk.js",
+    "static/js/2.63ea6beb.chunk.js.map": "/bbowl/static/js/2.63ea6beb.chunk.js.map",
+    "index.html": "/bbowl/index.html",
+    "precache-manifest.86c78e280aac32fdce5a926a877febea.js": "/bbowl/precache-manifest.86c78e280aac32fdce5a926a877febea.js",
+    "service-worker.js": "/bbowl/service-worker.js",
+    "static/css/main.b994a612.chunk.css.map": "/bbowl/static/css/main.b994a612.chunk.css.map",
+    "static/media/index.css": "/bbowl/static/media/gutcruncher-webfont.c7315c53.woff",
+    "static/media/croppedimage1201631-blood-bowl-2-background.jpg": "/bbowl/static/media/croppedimage1201631-blood-bowl-2-background.4c384a3e.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.240b9165.js",
+    "static/js/2.63ea6beb.chunk.js",
+    "static/css/main.b994a612.chunk.css",
+    "static/js/main.3882cd3e.chunk.js"
+  ]
+}
