@@ -1,26 +1,37 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import SignIn from './components/signin/signin.component.js'
+import CreateTeam from './components/create-team/createteam.component.js'
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+const initialState = {
+  route: 'signin',
+  isSignedIn: false,
+  user: {
+    name: '',
+    password: '',
+    teams: []
+  }
+}
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = initialState;
+    }
+
+
+  render() {
+    return (
+      <div className="App">
+        <h1>test</h1>     
+    { this.state.route === 'signin' ? <SignIn /> :
+     ( this.state.route === 'create' ? <CreateTeam /> : null )}
+  
+      </div>
+    );
+
+  }
+  
 }
 
 export default App;
