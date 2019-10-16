@@ -4,16 +4,63 @@
     justify-content: center;
     margin: 20px auto;
     width: 80%;
-    height: 200px;
+    height: 300px;
     background-color: #ede9d6;
     border-radius: 6px 6px;
     border: 4px solid #9e0e06;
   }
 
-  .signInForm input {
+  h2 {
+    font-size: 1.8em;
+  }
+
+  label {
+    font-size: 1.4em;
+  }
+
+  .signInInput {
     width: 80%;
     margin: 0 auto 20px;
     padding: 2px 4px;
     border-radius: 3px 3px;
     color: #9e0e06;
+    font-size: 1em;
   }
+
+  .signInInput:focus {
+    background-color: #9e0e06;
+    color: white;
+
+  }
+
+  .signInSubmit {
+    margin: 0 auto;
+    background-color: #9e0e06;
+    color:  white;
+    font-size: 1em;
+    width: 30%;
+  }
+  .signInSubmit:hover {
+    cursor: pointer;
+  }
+
+  p {
+    font-size: 1em;
+    margin-bottom: 30px;  
+  }
+
+  p:hover {
+    color: #9e0e06;
+    cursor: pointer;
+  }
+
+  @media screen and (min-width: 500px) {
+      .signInForm {
+          width: 30%;
+          height: 320px;
+      }
+
+      h2 {
+        font-size: 2.2em;
+      }
+    }

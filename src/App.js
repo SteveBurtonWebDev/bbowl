@@ -1,15 +1,21 @@
 import React, { Component } from 'react';
-import SignIn from './components/signin/signin.component.js'
-import CreateTeam from './components/create-team/createteam.component.js'
+import SignIn from './components/signin/signin.component.js';
+import HomeScreen from './components/homescreen/homescreen.component.js';
+import Register from './components/register/register.component.js';
+import logo from './images/croppedimage1201631-blood-bowl-2-background.jpg';
+
+
 import './App.css';
 
 const initialState = {
-  route: 'signin',
+  route: 'home',
   isSignedIn: false,
+  tempTeam: {},
   user: {
-    name: '',
-    password: '',
-    teams: []
+    id: '1',
+    name: 'steve',
+    password: 'test',
+    teams: [],
   }
 }
 
@@ -18,16 +24,26 @@ class App extends Component {
     super();
     this.state = initialState;
     }
+  
+  onRouteChange = (route) => {
+    if (route === 'home') {
+      this.setState({isSignedIn: true});
+    }
+    this.setState({route: route});
+  }
 
+  onAddTeam = () => {
+  }
 
   render() {
     return (
       <div className="App">
-        <h1>test</h1>     
-    { this.state.route === 'signin' ? <SignIn /> :
-     ( this.state.route === 'create' ? <CreateTeam /> : null )}
-  
-      </div>
+      <img src= { logo } alt='logo' />
+      { this.state.route === 'signin' ? <SignIn onRouteChange={this.onRouteChange} user={this.state.user} /> :
+      (this.state.route === 'home' || this.state.route === 'create' ? <HomeScreen onAddTeam={this.onAddTeam} route={this.state.route} onRouteChange={this.onRouteChange} user={this.state.user} /> :
+       (this.state.route === 'register' ? <Register /> : null))
+      }
+     </div>
     );
 
   }

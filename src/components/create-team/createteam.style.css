@@ -5,13 +5,16 @@
     justify-content: center;
     margin: 20px auto;
     width: 80%;
-    height: 150px;
+    height: 250px;
     background-color: #ede9d6;
     border-radius: 6px 6px;
     border: 4px solid #9e0e06;
     
   }
   
+  h2 {
+    font-size: 1.6em;
+  }
   .addTeamForm input {
     width: 80%;
     margin: 0 auto 5px;
@@ -25,8 +28,8 @@
   .addTeamForm select {
     width: 60%;
     margin: 5px auto ;
-    background-color: #9e0e06;
-    color: #ede9d6;
+    background-color: white;
+    color: #9e0e06;
   }
   
   .addTeamForm button {
