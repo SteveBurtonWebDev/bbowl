@@ -15,7 +15,7 @@ class HomeScreen extends Component {
     render() {
         const { route } = this.props;
         const  { user } = this.props;
-        // const { onRouteChange } = this.props;
+        const { onRouteChange } = this.props;
 
 
         return (
@@ -23,7 +23,18 @@ class HomeScreen extends Component {
                 <h1>{user.name}</h1> 
                 {user.teams.length === 0 || route === 'create' ?
                      <CreateTeam user = {user} onAddTeam={this.props.onAddTeam}/>
-                      : <h1>show teams</h1>}
+                      : 
+                        <div>
+                            <button
+                            onClick = {() => onRouteChange('create')}
+                            >create new team</button>
+                            <h1>{user.teams[0].teamName}</h1>
+                            <h1>{user.teams[0].teamRace}</h1>
+                        </div>                     
+                      
+                      
+                      
+                      }
 
             </div>
     

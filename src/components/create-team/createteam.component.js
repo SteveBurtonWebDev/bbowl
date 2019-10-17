@@ -6,19 +6,18 @@ class CreateTeam extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      newTeamName: '',
-      newTeamRace: 'orc',
-      newTeam: {}
+      teamName: '',
+      teamRace: 'orc',
       }
   }
   
 
   onNameChange = (event) => {
-    this.setState({newTeamName: event.target.value})
+    this.setState({teamName: event.target.value})
   }
 
   onRaceChange = (event) => {
-    this.setState({newTeamRace: event.target.value})
+    this.setState({teamRace: event.target.value})
   }
 
    render() {
@@ -27,12 +26,12 @@ class CreateTeam extends Component {
         <div className = 'addTeamForm'>
             <h2>create new team</h2>
             <label>
-              name {this.state.newTeamName}
+              name {this.state.teamName}
             </label>
             <input onChange={this.onNameChange} 
             className = 'teamNameInput' type="text" name = 'teamName' placeholder="team name" />
             <label>
-              race {this.state.newTeamRace}
+              race {this.state.teamRace}
             </label>  
               <select onChange={this.onRaceChange}
                defaultValue = "orc" className ='raceSelection'>
@@ -40,7 +39,13 @@ class CreateTeam extends Component {
                   <option value="human">Human</option>
                   <option value="dark elf">Dark Elf</option>
               </select>
-            <button className = 'createTeamButton'>Create Team</button>
+            <button
+              onClick={() => {
+                let teamobj = Object.assign({}, this.state);
+                teamobj.teamPlayers = [];
+                this.props.onAddTeam(teamobj);
+              }}
+              className = 'createTeamButton'>Create Team</button>
             
         </div>
     );

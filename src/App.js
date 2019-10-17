@@ -10,7 +10,6 @@ import './App.css';
 const initialState = {
   route: 'home',
   isSignedIn: false,
-  tempTeam: {},
   user: {
     id: '1',
     name: 'steve',
@@ -32,7 +31,17 @@ class App extends Component {
     this.setState({route: route});
   }
 
-  onAddTeam = () => {
+  onAddTeam = (teamobj) => {
+    const newTeams = [...this.state.user.teams];
+    newTeams.push(teamobj);
+    const newUser = {
+      id: this.state.user.id,
+      name: this.state.user.name,
+      password: this.state.user.password,
+      teams: newTeams
+    }
+    this.setState({user: newUser});
+    this.onRouteChange('home');
   }
 
   render() {
