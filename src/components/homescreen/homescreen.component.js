@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import NavBar from '../navbar/navbar.component.js';
 import CreateTeam from '../create-team/createteam.component.js';
 import './homescreen.style.css';
 
@@ -20,7 +21,7 @@ class HomeScreen extends Component {
 
         return (
             <div>
-                <h1>{user.name}</h1> 
+                <NavBar userName = {user.name} onRouteChange = {onRouteChange} />
                 {user.teams.length === 0 || route === 'create' ?
                      <CreateTeam user = {user} onAddTeam={this.props.onAddTeam}/>
                       : 

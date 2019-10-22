@@ -28,6 +28,9 @@ class App extends Component {
     if (route === 'home') {
       this.setState({isSignedIn: true});
     }
+    if (route === 'signin') {
+      this.setState({isSignedIn: false})
+    }
     this.setState({route: route});
   }
 

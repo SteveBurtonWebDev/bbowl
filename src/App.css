@@ -1,16 +1,16 @@
 .App {
+  margin: 0;
+  padding: 0;
   text-align: center;
 }
 
 img {
   width: 100%;
-  margin-bottom: 20px;
 }
 
 @media screen and (min-width: 500px) {
   img {
     width: 60vw;
-
     height: 30vh;
   }
 
