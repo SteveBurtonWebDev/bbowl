@@ -8,9 +8,12 @@ class HomeScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            test: ''
+            currentTeam: 0
         }
+    }
 
+    onTeamChange = (event) => {
+        this.setState({currentTeam: event.target.value},() => {console.log(this.state.currentTeam)})
     }
 
     render() {
@@ -26,8 +29,11 @@ class HomeScreen extends Component {
                      <CreateTeam user = {user} onAddTeam={this.props.onAddTeam}/>
                       : 
                         <div>
-                            <h1>{user.teams[0].teamName}</h1>
-                            <h1>{user.teams[0].teamRace}</h1>
+                            <select onChange={this.onTeamChange}>
+                                {user.teams.map((team, index) => <option key = {index} value = {index}>{team.teamName}</option> )}
+                            </select>
+                            <h1>{user.teams[this.state.currentTeam].teamName}</h1>
+                            <h1>{user.teams[this.state.currentTeam].teamRace}</h1>
                         </div>                     
                       
                       

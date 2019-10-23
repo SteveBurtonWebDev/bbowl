@@ -6,7 +6,6 @@ class NavBar extends Component {
         super(props)
     }
     render() {
-        console.log(this.props);
         return (
             <div className='nav'>
                 <h3>coach: </h3>
