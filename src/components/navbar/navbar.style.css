@@ -8,9 +8,9 @@
 
 .nav h3 {
     line-height: 30px;
-    width: 60px;
+    /* width: 60px; */
     color: #ede9d6;
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .nav button {
@@ -19,4 +19,5 @@
     background-color: #9e0e06;
     color: black;
     height: 20px;
+    font-size: 12px;
 }

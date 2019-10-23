@@ -9,13 +9,19 @@ class NavBar extends Component {
         console.log(this.props);
         return (
             <div className='nav'>
-                <button
-                     onClick={() => {
-                        this.props.onRouteChange('signin')
-                      }}           
-                >sign out</button>
+                <h3>coach: </h3>
                 <h3>{this.props.userName}</h3>
-            </div>
+                <button
+                    onClick={() => {
+                        this.props.onRouteChange('signin')
+                    }}           
+                >sign out</button>
+                {this.props.route === 'home' ?
+                    <button
+                    onClick = {() => this.props.onRouteChange('create')}
+                    >create new team</button> : null
+                }
+            </div> 
         ); 
     }
 
