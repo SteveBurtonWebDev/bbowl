@@ -18,7 +18,7 @@ class NavBar extends Component {
                 {this.props.route === 'home' ?
                     <button
                     onClick = {() => this.props.onRouteChange('create')}
-                    >create new team</button> : null
+                    >new team</button> : null
                 }
             </div> 
         ); 
